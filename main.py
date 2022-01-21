@@ -412,7 +412,7 @@ def change_name_State(row):
     State = str(row['State'])
     if "United" in State:
         return "UK"
-    elif State == "HAMPSHIRE UNITED KINGDOM"
+    elif State == "HAMPSHIRE UNITED KINGDOM":
         return "UK"
     elif "Not Found" in State:
         return "N/A"
@@ -420,11 +420,189 @@ def change_name_State(row):
         return "ON"
     elif "Florida" in State:
         return "FL"
-    elif State == "VICTORIA"
+    elif State == "VICTORIA":
         return "Victoria"
-
+    elif "New York" in State:
+        return "NY"
+    elif "NEW JERSEY" in State:
+        return "NJ"
+    elif "New South Wales" in State:
+        return "NSW"
+    elif "New Territories" in State:
+        return "NT"
+    elif "Newcastle Upon Tyne" in State:
+        return "NUT"
+    elif State == "NEW JERSEY":
+        return "NJ"
+    elif State == "NEW SOUTH WALES":
+        return "NSW"
+    elif "New Brunswick" in State:
+        return "NB"
+    elif "Newtownabbey" in State:
+        return "NTA"
+    elif "Gt Lon" in State:
+        return "London"
+    elif "Maharashtra" in State:
+        return "Maharashtra"
+    elif "AZ" in State :
+        return "AZ"
+    elif "Al Madinah Province" in State:
+        return "AL"
+    elif "Andhra Pradesh" in State:
+        return "AP"
+    elif State == "Australian Capital Territory":
+        return "AU"
+    elif "Argentina" in State:
+        return "AR"
+    elif "Australia" in State:
+        return "AU"
+    elif "Abu Dhabi" in State:
+        return "AD"
+    elif "Al Kuwayt" in State:
+        return "Kuwayt"
+    elif State == "Autonomous City of Buenos Aires":
+        return "Buenos Aires"
+    elif "British Columbia" in State :
+        return "BC"
+    elif "Greater London" in State :
+        return "London"
+    elif "North Somerset" in State :
+        return "NS"
+    elif "D.F." in State :
+        return "DF"
+    elif "West Sussex" in State :
+        return "WS"
+    elif "ks" in State :
+        return "KS"
+    elif "California" in State :
+        return "CA"
+    elif "Northern Ireland" in State :
+        return "NI"
+    elif "London" in State :
+        return "London"
+    elif "Western Australia" in State:
+        return "WA"
+    elif "QROO" in State :
+        return "QR"
+    elif "Bristol" in State :
+        return "Bristol"
+    elif "Dorset County" in State :
+        return "DC"
+    elif "Singapore" in State :
+        return "Singapore"
+    elif "West Mids" in State :
+        return "WM"
+    elif "South York" in State :
+        return "SY"
+    elif "Western Cape" in State :
+        return "WC"
+    elif "Brighton" in State :
+        return "Brighton"
+    elif State == "NEW JERSEY":
+        return "NJ"
+    elif "Grande Casablanca" in State :
+        return "GC"
+    elif "Brussel" in State :
+        return "Brussel"
+    elif "Manchester" in State:
+        return "Manchester"
+    elif "Accra" in State :
+        return "Accra"
+    elif "Distrito Federal" in State :
+        return "DF"
+    elif "Yorkshire" in State :
+        return "North Yorkshire"
+    elif "Columbia" in State :
+        return "Columbia"
+    elif "Westminster" in State :
+        return "Westminster"
+    elif "Madhya Pradesh" in State:
+        return "MP"
+    elif "Denmark" in State :
+        return "Denmark"
+    elif "Edinburgh" in State :
+        return "Edinburgh"
+    elif "West Lothian" in State :
+        return "WL"
+    elif "York" in State:
+        return "York"
+    elif "France" in State :
+        return "FR"
+    elif "Lumpur" in State :
+        return "Kuala Lumpur"
+    elif State == "SÃ£o Paulo":
+        return "Sao Paulo"
+    elif "Finland" in State :
+        return "Finland"
+    elif State == "FLORIDA 32901":
+        return "FL"
+    elif State == "OH.":
+        return "OH"
+    elif "Spain" in State:
+        return "Spain"
+    elif "Illinois" in State:
+        return  "IL"
+    elif State == "State / Province / Region":
+        return "N/A"
+    elif State == "South East Upper Bavaria / SÃ¼dostoberbayern":
+        return "Bavaria"
+    elif "Tamil Nadu" in State:
+        return "TN"
+    elif "Kingston" in State:
+        return "Kingston"
+    elif State == "CALIFORNA":
+        return "CL"
+    elif State == "JERSEY":
+        return  "NJ"
+    elif State == "MÃ©xico":
+        return "Mexico"
+    elif State == "W.A.":
+        return "WA"
+    elif State == "na":
+        return "N/A"
+    elif State == "2300":
+        return "N/A"
+    elif State == "BogotÃ¡, D.C.":
+        return "DC"
+    elif State == "-":
+        return "N/A"
+    elif "Dublin" in State:
+        return "Dublin"
+    elif State == "IL 60025":
+        return "IL"
+    elif State == "West Susx":
+        return "WS"
+    elif State == "Bath And North East Somerset":
+        return "Somerset"
+    elif State == " California":
+        return "CL"
+    elif State == "ONTARIO CANADA":
+        return "ON"
+    elif State == "#NAME?":
+        return  "N/A"
+    elif State == "FLORIDA 32901":
+        return "FL"
     else:
         return State
+def change_name_ZipCode(row):
+    ZipCode = str(row['ZipCode'])
+    if ZipCode == "Zip/Postal":
+        return "N/A"
+    elif ZipCode == "Zip / Postal Code":
+        return "N/A"
+    elif ZipCode == "0":
+        return "N/A"
+    elif ZipCode == "42100 FRANCE":
+        return "42100"
+    elif ZipCode == "Powell, Ohio 43065":
+        return "43065"
+    elif ZipCode == "flFL":
+        return "N/A"
+    elif ZipCode == "6090 â€Ž":
+        return "6090"
+
+    else:
+        return "ZipCode"
 
 
 df = pd.read_csv('LocationDataSample.csv')
