@@ -593,16 +593,111 @@ def change_name_ZipCode(row):
     elif ZipCode == "0":
         return "N/A"
     elif ZipCode == "42100 FRANCE":
-        return "42100"
+        return 42100
     elif ZipCode == "Powell, Ohio 43065":
-        return "43065"
+        return 43065
     elif ZipCode == "flFL":
         return "N/A"
     elif ZipCode == "6090 â€Ž":
-        return "6090"
+        return 6090
+    elif ZipCode == "BN1 1GEâ€Ž":
+        return "BN1 1GE"
+    elif "Dublin" in ZipCode:
+        return "N/A"
+    elif ZipCode == "Z19139ip/Pos":
+        return "N/a"
+    elif ZipCode == "Australia":
+        return "N/A"
+    elif ZipCode == "bn1 1we" :
+        return "BN1 1WE"
+    elif ZipCode == "VA":
+        return "N/A"
+    elif ZipCode == "NH":
+        return "N/A"
+    elif ZipCode == "IL":
+        return "N/A"
+    elif ZipCode == "ex6 7aj":
+        return "EX6 7AJ"
+    elif ZipCode == "E1":
+        return "N/A"
+    elif ZipCode == "se11 4ld":
+        return "SE11 4LD"
+    elif ZipCode == "nj":
+        return "N/A"
+    elif ZipCode == "Postal Code":
+        return  "N/A"
+    elif ZipCode == "Postcode":
+        return "N/A"
+    elif ZipCode == "TX":
+        return "N/A"
+    elif ZipCode == "British Columbia":
+        return "N/A"
+    elif ZipCode == "91316/ 91335":
+        return 91316
+    elif ZipCode == "Florida":
+        return "N/A"
+    elif ZipCode == "413 01 GÃ¶teborg":
+        return "413 01 GA"
+    elif ZipCode == "Singapore":
+        return "N/A"
+    elif ZipCode == "ki":
+        return "N/A"
+    elif ZipCode == " 400 Glenwoo":
+        return "400 Gl"
+    elif ZipCode == "TN25 4AJ. (For SatNav please use TN24 9JZ)":
+        return "N/A"
+    elif ZipCode == "D2":
+        return "N/A"
+    elif ZipCode == "PA":
+        return "N/A"
+    elif ZipCode == "NY":
+        return "N/A"
+    elif ZipCode == "E2":
+        return "N/A"
+    elif ZipCode == "W1":
+        return "N/A"
+    elif ZipCode == "NC":
+        return "N/A"
+    elif ZipCode == "SC":
+        return "N/A"
+    elif ZipCode == "S75v 1JL":
+        return "S75V 1JL"
+    elif ZipCode == "t0c 2p0":
+        return "T0C 2P0"
+    elif ZipCode == "k1y 0y1":
+        return "K1Y 0Y1"
+    elif ZipCode == "NV":
+        return "N/A"
+    elif ZipCode == "SEEKONK, MA.":
+        return "N/A"
+    elif ZipCode == "DC":
+        return "N/A"
+    elif ZipCode == "T0P":
+        return "N/A"
+    elif ZipCode == "Cambridge, MA":
+        return "N/A"
+    elif ZipCode == "Nevada":
+        return "N/A"
+    elif ZipCode == "Kingston 12":
+        return "N/A"
+    elif ZipCode == "E14 4DHâ€Ž":
+        return "E14 4DH"
+    elif ZipCode == "WA":
+        return "N/A"
+
+
+
+
+
+
+
+
+
+
+
 
     else:
-        return "ZipCode"
+        return ZipCode
 
 
 df = pd.read_csv('LocationDataSample.csv')
@@ -610,5 +705,6 @@ print(df)
 df.fillna({'City': 'Not found', 'State': 'Not Found', 'ZipCode': 0, 'Country': 'Not Available'}, inplace=True)
 df['change_name_City'] = df.apply(lambda row: change_name_City(row), axis=1)
 df['change_name_State'] = df.apply(lambda row: change_name_State(row), axis=1)
+df['change_name_ZipCode'] = df.apply(lambda row: change_name_ZipCode(row), axis=1)
 
 df.to_csv('New.csv', index=False)
